@@ -10,7 +10,11 @@ package com.interfaces;
  * @author criminal
  */
 public interface MessageServiceInjector {
-    
+    /**
+     * Injector
+     * 
+     * @return 
+     */
     public Consumer getConsumer();
     
 }

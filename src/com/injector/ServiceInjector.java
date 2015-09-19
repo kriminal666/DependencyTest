@@ -18,7 +18,11 @@ import com.processors.MessageProcessor;
 public class ServiceInjector implements MessageServiceInjector{
     
     private MessageService tipo;
-
+    /**
+     * Constructor
+     * 
+     * @param tipo 
+     */
     public ServiceInjector(MessageService tipo) {
         this.tipo = tipo;
     }

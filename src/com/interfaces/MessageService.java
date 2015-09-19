@@ -10,7 +10,12 @@ package com.interfaces;
  * @author criminal
  */
 public interface MessageService {
-    
+    /**
+     * Send the message
+     * 
+     * @param msg
+     * @param receiver 
+     */
     void sendMessage(String msg,String receiver);
     
 }

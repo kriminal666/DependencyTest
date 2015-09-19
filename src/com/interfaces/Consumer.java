@@ -11,6 +11,12 @@ package com.interfaces;
  */
 public interface Consumer {
     
+    /**
+     * Process the messages
+     * 
+     * @param msg
+     * @param rec 
+     */
     void processMessages(String msg, String rec);
     
 }

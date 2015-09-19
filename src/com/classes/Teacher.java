@@ -10,7 +10,13 @@ package com.classes;
  * @author criminal
  */
 public class Teacher extends Person{
-
+    /**
+     * super constructor
+     * 
+     * @param name
+     * @param dni
+     * @param email 
+     */
     public Teacher(String name, String dni,String email) {
         super(name, dni,email);
     }

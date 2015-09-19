@@ -16,6 +16,11 @@ public class MessageProcessor implements Consumer{
  
     private MessageService service;
      
+    /**
+     * Constructor
+     * 
+     * @param svc 
+     */
     public MessageProcessor(MessageService svc){
         this.service=svc;
     }

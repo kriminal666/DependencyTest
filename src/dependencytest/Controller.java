@@ -16,7 +16,14 @@ import com.interfaces.MessageService;
  */
 public class Controller {
     
-    
+    /**
+     * Send message method
+     * 
+     * @param type
+     * @param person
+     * @param msg
+     * @param email 
+     */
     public static void sendMessage(MessageService type, Person person,String msg,String email){
        
         ServiceInjector injector = null;
