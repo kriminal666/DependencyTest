@@ -37,7 +37,7 @@ public class MessageFactory {
                 
         }
         //If type is not valid throw exception
-        throw new Exception("Wine Maker Type not found");
+        throw new Exception("Message Type not found");
         
     }
     
