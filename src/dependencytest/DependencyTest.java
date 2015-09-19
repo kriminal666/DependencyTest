@@ -6,9 +6,13 @@
 package dependencytest;
 
 import com.classes.Teacher;
+import com.enums.MessageType;
+import com.factories.MessageFactory;
 import com.implementations.EmailImplementation;
 import com.implementations.SMSImplementation;
 import com.implementations.WhatsUpImplementation;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -21,12 +25,17 @@ public class DependencyTest {
      */
     public static void main(String[] args) {
         Teacher teach1 = new Teacher("Carlos","333333333G","carlos@hotmail.com");
-        //Email
-       Controller.sendMessage(new EmailImplementation(),teach1,"Hello", "Carlitos");
-       //SMS
-       Controller.sendMessage(new SMSImplementation(), teach1, "hello", "Carlitos");
-       //WhatsUp
-       Controller.sendMessage(new WhatsUpImplementation(), teach1, "hello", "Carlitos");
+        try {
+            //Email
+            Controller.sendMessage(MessageFactory.getTypeOfMessage(MessageType.EMAIL),teach1,"Hello", "Carlitos");
+            //SMS
+            Controller.sendMessage(MessageFactory.getTypeOfMessage(MessageType.SMS), teach1, "hello", "Carlitos");
+            //WhatsUp
+            Controller.sendMessage(MessageFactory.getTypeOfMessage(MessageType.WHATSUP), teach1, "hello", "Carlitos");
+        } catch (Exception ex) {
+            Logger.getLogger(DependencyTest.class.getName()).log(Level.SEVERE, null, ex);
+        }
+       
     }
     
 }
