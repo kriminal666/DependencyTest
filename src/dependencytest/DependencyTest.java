@@ -23,7 +23,9 @@ public class DependencyTest {
         Teacher teach1 = new Teacher("Carlos","333333333G","carlos@hotmail.com");
         //Email
        Controller.sendMessage(new EmailImplementation(),teach1,"Hello", "Carlitos");
+       //SMS
        Controller.sendMessage(new SMSImplementation(), teach1, "hello", "Carlitos");
+       //WhatsUp
        Controller.sendMessage(new WhatsUpImplementation(), teach1, "hello", "Carlitos");
     }
     

@@ -22,7 +22,7 @@ public class Controller {
         ServiceInjector injector = null;
         Consumer app = null;
          
-        //Send email
+        //Send message
         injector = new ServiceInjector(type);
         app = injector.getConsumer();
         app.processMessages(msg, person.getEmail());
